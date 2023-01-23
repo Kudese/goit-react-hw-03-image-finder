@@ -12,11 +12,11 @@ export default function ImageGalleryItem({ card, onOpenModal }) {
     </li>
   );
 }
-ImageGalleryItem.propTypes={
+ImageGalleryItem.propTypes = {
   onOpenModal: PropTypes.func.isRequired,
- card: PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  webformatURL: PropTypes.string.isRequired,
-  tags: PropTypes.string.isRequired,
-}),
-}
+  card: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    webformatURL: PropTypes.string.isRequired,
+    tags: PropTypes.string.isRequired,
+  }),
+};

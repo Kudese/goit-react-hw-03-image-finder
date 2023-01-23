@@ -31,7 +31,6 @@ export default class Modal extends Component {
   }
 }
 
-
 Modal.propTypes = {
   onModalClose: PropTypes.func.isRequired,
   card: PropTypes.shape({
