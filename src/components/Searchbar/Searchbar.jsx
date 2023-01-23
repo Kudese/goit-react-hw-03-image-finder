@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import s from '../Searchbar/Searchbar.module.css'
 export default function Searcbar({onSubmit}) {
     return(
@@ -19,4 +20,8 @@ export default function Searcbar({onSubmit}) {
   </form>
 </header>
     )
+}
+
+Searcbar.propTypes={
+  onSubmit: PropTypes.func.isRequired,
 }

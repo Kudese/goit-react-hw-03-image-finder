@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import s from './ImageGalleryItem.module.css';
 export default function ImageGalleryItem({ card, onOpenModal }) {
   const { id, webformatURL, tags } = card;
@@ -10,4 +11,12 @@ export default function ImageGalleryItem({ card, onOpenModal }) {
       />
     </li>
   );
+}
+ImageGalleryItem.propTypes={
+  onOpenModal: PropTypes.func.isRequired,
+ card: PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  webformatURL: PropTypes.string.isRequired,
+  tags: PropTypes.string.isRequired,
+}),
 }

@@ -59,8 +59,6 @@ export class App extends Component {
     });
   };
   handleOpenModal = id => {
-    console.log(id);
-
     this.setState(() => {
       const index = this.state.list.findIndex(item => {
         return item.id === id;
@@ -84,7 +82,9 @@ export class App extends Component {
               list={this.state.list}
               onOpenModal={this.handleOpenModal}
             />
-            <Button onLearMore={this.handleLearMore} />
+            {this.state.list.length === this.state.basePage * 12 && (
+              <Button onLearMore={this.handleLearMore} />
+            )}
           </>
         )}
 
